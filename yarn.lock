@@ -288,10 +288,17 @@
     tree-kill "1.2.0"
     webpack-sources "1.2.0"
 
-"@nguniversal/express-engine@^7.0.0":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-7.0.2.tgz#f7722828d7ec14951d0c24ad438772daf79583c8"
-  integrity sha512-mmNgDpUrcuFcjBOfUlmAliS3St4tSekLdQZWu6PK/d+kw5zicDDlSO/UoUw5g+wz7YHkGQK+VDy3wHc0Bo36rA==
+"@nguniversal/common@9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-9.1.0.tgz#01ac2d2c47c6d04f955f1713697377afcaa1ad91"
+  integrity sha512-Pvb3KhuV44PxLmVOf1dqnuckdaNdfT5tbiUu2/vVbdtyFdQpF40D1Zx4RumRymK0ZzTJGQsJtJSi2DJvvGgwMg==
+
+"@nguniversal/express-engine@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-9.1.0.tgz#ddc1cecb4134a365142a9ba6ebb6ae8f99cb2ad1"
+  integrity sha512-uRb8dJD3huk42eY1iOpmr8yfq/LTSOoUfKY4eVREE7nMePyZNSRQHNCEybHDTNh43FvTN38u+cA4dTlmMFD5GQ==
+  dependencies:
+    "@nguniversal/common" "9.1.0"
 
 "@schematics/angular@7.0.4":
   version "7.0.4"
