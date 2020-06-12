@@ -19,7 +19,8 @@ export class CookieOptionsProvider {
       domain: null,
       expires: null,
       secure: false,
-      httpOnly: false
+      httpOnly: false,
+      sameSite: 'Strict',
     };
     this._options = mergeOptions(this.defaultOptions, options);
   }

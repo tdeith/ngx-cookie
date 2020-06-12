@@ -18,6 +18,9 @@
  * - **httpOnly** - {boolean} - If `true`, then the cookie will be set with the `HttpOnly`
  *   flag, and will only be accessible from the remote server. Helps to prevent against
  *   XSS attacks.
+ * - **sameSite** - {'Strict'|'Lax'|'None'} - Sets the 'SameSite' attribute. Defaults to 'Strict'.
+ *   Set this to 'Lax' or 'None' if you require cross-subdomain or cross-domain (respectively)
+ *   sharing of cookies.
  * - **storeUnencoded** - {boolean} - If `true`, then the cookie value will not be encoded and
  *   will be stored as provided.
  */
@@ -27,5 +30,6 @@ export interface CookieOptions {
   expires?: string|Date;
   secure?: boolean;
   httpOnly?: boolean;
+  sameSite?: 'Strict'|'Lax'|'None';
   storeUnencoded?: boolean;
 }

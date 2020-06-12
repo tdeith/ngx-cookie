@@ -35,6 +35,10 @@ export class CookieService implements ICookieService {
     document.cookie = val;
   }
 
+  constructor(optionsProvider: CookieOptionsProvider) {
+    this.options = optionsProvider.options;
+  }
+
   /**
    * @name CookieService#get
    *
@@ -172,10 +176,11 @@ export class CookieService implements ICookieService {
     const cookieValue = opts.storeUnencoded ? value : encodeURIComponent(value);
     let str = encodeURIComponent(name) + '=' + cookieValue;
     str += opts.path ? ';path=' + opts.path : '';
-    str += opts.domain ? ';domain=' + opts.domain : '';
     str += expires ? ';expires=' + expires.toUTCString() : '';
+    str += opts.domain ? ';domain=' + opts.domain : '';
     str += opts.secure ? ';secure' : '';
-    str += opts.httpOnly ? '; HttpOnly' : '';
+    str += opts.httpOnly ? ';HttpOnly' : '';
+    str += opts.sameSite ? ';sameSite=' + opts.sameSite: '';
 
     // per http://www.ietf.org/rfc/rfc2109.txt browser must allow at minimum:
     // - 300 cookies
